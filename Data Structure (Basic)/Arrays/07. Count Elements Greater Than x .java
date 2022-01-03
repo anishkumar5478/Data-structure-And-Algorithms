@@ -1,19 +1,48 @@
 // { Driver Code Starts
-//Initial Template for C++
-#include<bits/stdc++.h>
-using namespace std;
+//Initial Template for Java
 
- // } Driver Code Ends
-//User function Template for C++
 
-class Solution{
-    public:
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+class Driver
+{
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(read.readLine());
+        
+        while(t-- > 0)
+        {
+            int n = Integer.parseInt(read.readLine());
+            String str[] = read.readLine().trim().split(" ");
+            
+            int arr[] = new int[n];
+            for(int i = 0; i <n; i++)
+                arr[i] = Integer.parseInt(str[i]);
+            
+            int x = Integer.parseInt(read.readLine());
+            System.out.println(new Solution().greaterThanX(arr, n, x));
+            
+        }
+    }
+}
+
+// } Driver Code Ends
+
+
+//User function Template for Java
+
+
+class Solution
+{
     // arr[]: input array
     // n: size of the array
     // x: element for which you need to return the count
-    int greaterThanX(int arr[],int n,int x)
+    public static int greaterThanX(int arr[], int n, int x)
     {
-        // your code here
+        // Your code here
         
         int count =0 ;
         for(int i =0;i<n;i++)
@@ -25,25 +54,4 @@ class Solution{
         }
         return count;
     }
-};
-
-
-// { Driver Code Starts.
-int main() {
-	int T;
-	cin>>T;
-	while(T--) 
-	{
-	    int N;
-	    cin>>N;
-	    int arr[N];
-	    for(int i=0;i<N;i++)
-	    cin>>arr[i];
-	    int x;
-	    cin>>x;
-	    Solution ob;
-	    cout<<ob.greaterThanX(arr,N,x);
-	    cout<<endl;
-	}
-	return 0;
-}  // } Driver Code Ends
+}
