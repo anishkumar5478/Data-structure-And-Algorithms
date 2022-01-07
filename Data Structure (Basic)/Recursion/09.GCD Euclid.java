@@ -1,41 +1,50 @@
 // { Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
+//Initial Template for Java
 
- // } Driver Code Ends
-//User function Template for C++
+import java.util.*;
+import java.io.*;
+import java.lang.*;
 
-class Solution{
-    public:
-        int GCD(int a,int b)
+class GFG
+{
+    public static void main(String args[])throws IOException
     {
-        //Your code here
+        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(read.readLine());
         
-        if(a==0)
+        while(t-- > 0)
         {
-            return b;
-        }
-        if(b==0)
-        {
-            return a;
-        }
-        else
-        {
-            return GCD(b,a%b);
+            String str[] = read.readLine().trim().split(" ");
+            int a = Integer.parseInt(str[0]);
+            int b = Integer.parseInt(str[1]);
+            
+            System.out.println(new Solution().GCD(a, b));
         }
     }
-};
+}
 
-// { Driver Code Starts.
-int main() {
-	int T;
-	cin>>T;
-	while(T--) 
-	{
-	    int a,b;
-	    cin>>a>>b;
-	    Solution ob;
-	    cout<<ob.GCD(a,b)<<endl;
-	}
-	return 0;
-}  // } Driver Code Ends
+// } Driver Code Ends
+
+
+//User function Template for Java
+
+class Solution
+{
+    // Complete the function
+    // a: first number
+    // b: second number
+    public static int GCD(int a, int b)
+    {
+        // find and return GCD of two numbers;
+        
+        if(a==0)
+            return b;
+        if(b==0)
+            return a;
+            
+        else
+        {
+            return (GCD(b,a%b));
+        }
+    }
+}
