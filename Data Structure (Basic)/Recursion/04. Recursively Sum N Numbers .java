@@ -20,7 +20,7 @@ class GFG
             System.out.println(new Solution().recursiveSum(n));
         }
     }
-}// } Driver Code Ends
+}// } Driver Code End
 
 
 //User function Template for Java
