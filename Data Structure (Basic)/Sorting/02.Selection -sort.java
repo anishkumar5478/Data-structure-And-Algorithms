@@ -44,6 +44,7 @@ class Solution
 	    {
 	        for(int j = i + 1; j < n; j++){
 	            if(arr[i] > arr[j]){
+			    // swap
 	                int temp = arr[j];
 	                arr[j] = arr[i];
 	                arr[i] = temp;
